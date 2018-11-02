@@ -652,7 +652,7 @@ declare namespace ArangoDB {
         document(
             selectors: ReadonlyArray<string | DocumentLike>
         ): Array<Document<T>>;
-        exists(name: string): boolean;
+        exists(selector: string | DocumentLike): Document<T> | boolean;
         firstExample(example: Partial<Document<T>>): Document<T> | null;
         insert(data: DocumentData<T>, options?: InsertOptions): InsertResult<T>;
         insert(
